@@ -1,0 +1,23 @@
+h1 {
+    color: green;
+}
+
+div.floated_img
+{
+    float: left;
+    margin-right:15px;
+
+}
+ img.grid_img
+ {
+ width: 400px;
+    height: 400px;
+ }
+
+div.float_right
+{
+float: right;
+    color: orange;
+    font-size:25px
+
+}

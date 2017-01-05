@@ -1,0 +1,15 @@
+{% load static %}
+{% load tags %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'shop/style.css' %}" />
+
+<h1>Cart</h1>
+{% for prod in product_list.all %}
+    {% for item in prod.image_set.all %}
+        <div class="floated_img">
+        <img class="grid_img" src="{{item.image.url}}" alt="" >
+        <p>Item price: {{prod.official_price}}<br>{{prod.product_name}}<br>Quantity: {{prod.in_cart_number}}
+        <br>Total price: {{ total_price_dict|lookup:item.id }}
+        </div>
+    {% endfor %}
+{% endfor %}
